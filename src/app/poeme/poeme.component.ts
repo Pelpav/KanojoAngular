@@ -17,7 +17,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   selector: 'app-poeme',
   standalone: true,
-  providers: [HttpClient, PoemService],
+  providers: [HttpClient, PoemService, Location, ActivatedRoute],
   templateUrl: './poeme.component.html',
   styleUrl: './poeme.component.scss',
   imports: [
@@ -67,7 +67,7 @@ export class PoemeComponent {
       }
     );
     if (this.poems.length === 0) {
-      console.log('Non Récupéré');
+      this.location.reload(); // Recharge la page si aucun poème n'est récupéré
     }
   }
 
