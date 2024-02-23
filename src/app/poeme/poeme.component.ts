@@ -67,7 +67,7 @@ export class PoemeComponent {
       }
     );
     if (this.poems.length === 0) {
-      this.location.reload(); // Recharge la page si aucun poème n'est récupéré
+      console.log('Non Récupéré');
     }
   }
 
