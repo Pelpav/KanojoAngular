@@ -1,15 +1,19 @@
-<div>
-    <h2>Liste des poèmes</h2>
-  
-      <div class="poems" *ngFor="let poem of poems">
-        <a (click)="openPoem(poem.id)">{{ poem.title }}</a>
+<div class="main">
+    <app-navbar>
+    </app-navbar>
+    <div *ngIf="showPoemList">
+        <h2>Liste des poèmes</h2>
+        <div class="poems" *ngFor="let poem of poems">
+            <a (click)="openPoem(poem.id)" [innerHTML]="getSafeHtml(poem.title)"></a>
+        </div>
       </div>
-  
-    <!-- Modal pour afficher le contenu du poème -->
-    <div *ngIf="selectedPoem" class="modal">
-      <h2>{{ selectedPoem.title }}</h2>
-      <p>{{ selectedPoem.content }}</p>
-      <button (click)="closePoem()">Fermer</button>
-    </div>
-  </div>
+      
+      <!-- Modal pour afficher le contenu du poème -->
+      <div *ngIf="selectedPoem" class="modal">
+        <h2>{{ selectedPoem.title }}</h2>
+        <p [innerHTML]="transformContent(selectedPoem.content)"></p>
+        <button (click)="closePoem()">Fermer</button>
+      </div>
+      
+</div>
   

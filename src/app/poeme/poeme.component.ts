@@ -4,23 +4,38 @@ import { PoemService } from '../poem.service';
 import { NgFor, NgIf } from '@angular/common';
 import { Poem } from '../poem';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { ActivatedRoute, Route, RouterLink, RouterModule } from '@angular/router';
+import { Http2ServerRequest, Http2ServerResponse } from 'http2';
+import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
-  selector: 'app-poeme',
-  standalone: true,
-  imports: [HttpClientModule, NgFor, NgIf],
-  providers: [HttpClient, PoemService],
-  templateUrl: './poeme.component.html',
-  styleUrl: './poeme.component.scss'
+    selector: 'app-poeme',
+    standalone: true,
+    providers: [HttpClient, PoemService],
+    templateUrl: './poeme.component.html',
+    styleUrl: './poeme.component.scss',
+    imports: [HttpClientModule, NgFor, NgIf, RouterModule, RouterLink, NavbarComponent]
 })
 export class PoemeComponent {
   poems: Poem[] = [];
   selectedPoem: Poem | null;
+  showPoemList=true;
 
-  constructor(private poemService: PoemService) {
+  constructor(private sanitizer: DomSanitizer, private route: ActivatedRoute, private poemService: PoemService, private http: HttpClient) {
     this.selectedPoem = null;
    }
+
+   getPoemById(id: number): Observable<Poem> {
+    // Chercher le poème dans le tableau 'poems'
+    const poem = this.poems.find(poem => poem.id === id);
+  
+    // Si le poème est trouvé, retourner un Observable du poème
+    if (poem) {
+      return of(poem);
+    }
+    return this.http.get<Poem>(`https://kikipavlova.000webhostapp.com/poems.php?id=${id}`);
+  }
 
   ngOnInit(): void {
     this.poemService.getAllPoems().subscribe(
@@ -36,15 +51,25 @@ export class PoemeComponent {
 
   
 
-openPoem(id: number) {
-  this.poemService.getPoemById(id, this.poems).subscribe(poem => {
-    this.selectedPoem = poem;
-  });
-}
+  openPoem(id: number) {
+    this.poemService.getPoemById(id, this.poems).subscribe(poem => {
+      this.selectedPoem = poem;
+      this.showPoemList = false; // Ajoutez cette ligne
+    });
+  }
+  getSafeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+  
+  transformContent(content: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(content.replace(/\n/g, '<br/>'));
+  }
 
-closePoem() {
-  this.selectedPoem = null;
-}
+  closePoem() {
+    this.selectedPoem = null;
+    this.showPoemList = true; // Ajoutez cette ligne
+  }
+  
 
 }
 

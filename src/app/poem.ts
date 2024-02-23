@@ -1,5 +1,5 @@
 export interface Poem {
-    id: number;
+    id:number;
     title: string;
     content: string;
     created_at: Date;

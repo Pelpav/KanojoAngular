@@ -4,11 +4,13 @@ import { PoemeComponent } from './poeme/poeme.component';
 import { SurprisesComponent } from './surprises/surprises.component';
 import { AddpoemeComponent } from './addpoeme/addpoeme.component';
 import { Erreur404Component } from './erreur404/erreur404.component';
+import { PoemdescComponent } from './poemdesc/poemdesc.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/acceuil', pathMatch: 'full' }, 
   { path: 'acceuil', component: AcceuilComponent },
   { path: 'poemes', component: PoemeComponent},
+  { path: 'poem/:id', component: PoemdescComponent },
   { path: 'surprises', component: SurprisesComponent},
   { path: 'addpoeme', component: AddpoemeComponent},
   { path: '**', component: Erreur404Component}
