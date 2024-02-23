@@ -37,7 +37,6 @@ export class PoemeComponent {
 
   constructor(
     private sanitizer: DomSanitizer,
-    private route: ActivatedRoute,
     private poemService: PoemService,
     private http: HttpClient
   ) {
