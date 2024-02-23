@@ -4,6 +4,7 @@ import { PoemService } from '../poem.service';
 import { NgFor, NgIf } from '@angular/common';
 import { Poem } from '../poem';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-poeme',
@@ -32,10 +33,11 @@ export class PoemeComponent {
     );
   }
 
+
   
 
 openPoem(id: number) {
-  this.poemService.getPoemById(id).subscribe(poem => {
+  this.poemService.getPoemById(id, this.poems).subscribe(poem => {
     this.selectedPoem = poem;
   });
 }
