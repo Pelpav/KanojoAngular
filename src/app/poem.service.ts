@@ -18,7 +18,7 @@ export class PoemService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.get<Poem[]>('https://kikipavlova.000webhostapp.com/poems', httpOptions);
+    return this.http.get<Poem[]>('https://kikipavlova.000webhostapp.com/poems.php', httpOptions);
   }
   
 }
