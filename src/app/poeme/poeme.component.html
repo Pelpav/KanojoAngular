@@ -13,7 +13,7 @@
       <div class="padpoem">
         <h2>{{ selectedPoem.title }}</h2>
         <p [innerHTML]="transformContent(selectedPoem.content)"></p>
-        <button (click)="closePoem()">Fermer</button>
+        <a class="fermer" (click)="closePoem()">Fermer</a>
       </div>
       </div>
         

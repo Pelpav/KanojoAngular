@@ -20,6 +20,21 @@
     padding-top: 20px;
 }
 
+.fermer{
+    outline: none;
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 6px 15px;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: linear-gradient( 135deg, #ff9a9e  10%, #F6416C 100%);
+  text-decoration: none;
+}
+
 @media (min-height:915px) {
     @media (max-height:931px) {
         .glass{
