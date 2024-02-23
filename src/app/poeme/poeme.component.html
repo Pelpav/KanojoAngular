@@ -1,11 +1,15 @@
 <div>
     <h2>Liste des poèmes</h2>
-    <ul>
-      <li *ngFor="let poem of poems">
-        <h3>{{ poem.title }}</h3>
-        <p>{{ poem.content }}</p>
-        <p>Date de création : {{ poem.created_at }}</p>
-      </li>
-    </ul>
+  
+      <div class="poems" *ngFor="let poem of poems">
+        <a (click)="openPoem(poem.id)">{{ poem.title }}</a>
+      </div>
+  
+    <!-- Modal pour afficher le contenu du poème -->
+    <div *ngIf="selectedPoem" class="modal">
+      <h2>{{ selectedPoem.title }}</h2>
+      <p>{{ selectedPoem.content }}</p>
+      <button (click)="closePoem()">Fermer</button>
+    </div>
   </div>
   
