@@ -1,11 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-  transition: all 0.3s ease;
-}
 
 .navbar{
   margin: auto;
@@ -40,7 +32,7 @@
 .navbar .menu a:hover{
   color: #f2f2f2;
 }
-.navbar .buttons input{
+.navbar .buttons a{
   outline: none;
   color: #f2f2f2;
   font-size: 18px;
@@ -52,8 +44,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   background-image: linear-gradient( 135deg, #ff9a9e  10%, #F6416C 100%);
+  text-decoration: none;
 }
-.navbar .buttons input:hover{
+.navbar .buttons a:hover{
   transform: scale(0.97);
 }
   .text-content{

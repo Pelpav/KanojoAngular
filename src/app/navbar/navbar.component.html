@@ -1,13 +1,8 @@
-
-    <nav class="navbar">
-        <div class="logo"><a href="">Kiki ❤ Pav</a></div>
-        <ul class="menu">
-
-        </ul>
-        <div class="buttons">
-          <input type="button" value="Poèmes">
-          <input type="button" value="Surprises">
-          <input type="button" value="Ajouter un poème">
-
-        </div>
-      </nav>
+<nav class="navbar">
+    <div class="logo"><a href="">Kiki ❤ Pav</a></div>
+    <div class="buttons">
+        <a [routerLink]="'/poemes'" type="button" value="">Poèmes</a>
+        <a [routerLink]="'/surprises'" type="button" value="">Surprises</a>
+        <a [routerLink]="'/addpoeme'" type="button" value="">Ajouter un poème</a>
+    </div>
+</nav>
