@@ -65,9 +65,6 @@ export class PoemeComponent {
         console.error('Erreur lors de la récupération des poèmes : ', error);
       }
     );
-    if (this.poems.length === 0) {
-      window.location.reload(); // Recharge la page si aucun poème n'est récupéré
-    }
   }
 
   openPoem(id: number) {
