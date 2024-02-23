@@ -1,18 +1,22 @@
 <div class="main">
     <app-navbar>
     </app-navbar>
-    <div *ngIf="showPoemList">
+    <div class="padpoem" *ngIf="showPoemList">
         <h2>Liste des poèmes</h2>
         <div class="poems" *ngFor="let poem of poems">
             <a (click)="openPoem(poem.id)" [innerHTML]="getSafeHtml(poem.title)"></a>
         </div>
       </div>
-      
-      <!-- Modal pour afficher le contenu du poème -->
-      <div *ngIf="selectedPoem" class="modal">
+      <div  *ngIf="selectedPoem" class="modal">
+      <div class="glass" (scroll)="true">
+        <!-- Modal pour afficher le contenu du poème -->
+      <div class="padpoem">
         <h2>{{ selectedPoem.title }}</h2>
         <p [innerHTML]="transformContent(selectedPoem.content)"></p>
         <button (click)="closePoem()">Fermer</button>
+      </div>
+      </div>
+        
       </div>
       
 </div>

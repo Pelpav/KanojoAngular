@@ -1,3 +1,36 @@
 .poems{
     z-index: 8000;
 }
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 3%;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.padpoem{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+@media (min-height:915px) {
+    @media (max-height:931px) {
+        .glass{
+            height: 750px;
+        }
+    }
+    
+}
+
+@media (min-height:931){
+    .glass{
+        height: 600px;
+    }
+}
