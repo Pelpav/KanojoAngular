@@ -13,11 +13,12 @@ import {
 } from '@angular/router';
 import { Http2ServerRequest, Http2ServerResponse } from 'http2';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-poeme',
   standalone: true,
-  providers: [HttpClient, PoemService, Location, ActivatedRoute],
+  providers: [HttpClient, PoemService, ActivatedRoute],
   templateUrl: './poeme.component.html',
   styleUrl: './poeme.component.scss',
   imports: [
@@ -38,8 +39,7 @@ export class PoemeComponent {
     private sanitizer: DomSanitizer,
     private route: ActivatedRoute,
     private poemService: PoemService,
-    private http: HttpClient,
-    private location: Location
+    private http: HttpClient
   ) {
     this.selectedPoem = null;
   }
@@ -67,7 +67,7 @@ export class PoemeComponent {
       }
     );
     if (this.poems.length === 0) {
-      this.location.reload(); // Recharge la page si aucun poème n'est récupéré
+      window.location.reload(); // Recharge la page si aucun poème n'est récupéré
     }
   }
 
