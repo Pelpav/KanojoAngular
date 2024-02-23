@@ -11,7 +11,7 @@ export class PoemService {
   constructor(private http: HttpClient) {}
 
   getAllPoems(): Observable<Poem[]> {
-    return this.http.get<Poem[]>('https://votre-api.000webhostapp.com/poems');
+    return this.http.get<Poem[]>('https://kikipavlova.000webhostapp.com/poems');
   }
 
 }

@@ -8,6 +8,7 @@ import { Poem } from '../poem';
   selector: 'app-poeme',
   standalone: true,
   imports: [HttpClientModule, NgFor],
+  providers: [HttpClient, PoemService],
   templateUrl: './poeme.component.html',
   styleUrl: './poeme.component.scss'
 })
