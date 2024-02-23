@@ -1,7 +1,7 @@
 export interface Poem {
     id: number;
-    name: string;
-    text: string;
-    createdAt: Date;
+    title: string;
+    content: string;
+    created_at: Date;
   }
   

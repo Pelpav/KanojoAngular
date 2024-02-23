@@ -2,9 +2,9 @@
     <h2>Liste des poèmes</h2>
     <ul>
       <li *ngFor="let poem of poems">
-        <h3>{{ poem.name }}</h3>
-        <p>{{ poem.text }}</p>
-        <p>Date de création : {{ poem.createdAt }}</p>
+        <h3>{{ poem.title }}</h3>
+        <p>{{ poem.content }}</p>
+        <p>Date de création : {{ poem.created_at }}</p>
       </li>
     </ul>
   </div>
