@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Poem } from './poem';
 import { Observable } from 'rxjs';
@@ -11,7 +11,14 @@ export class PoemService {
   constructor(private http: HttpClient) {}
 
   getAllPoems(): Observable<Poem[]> {
-    return this.http.get<Poem[]>('https://kikipavlova.000webhostapp.com/poems');
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': 'my-auth-token',
+        'Access-Control-Allow-Origin': '*'
+      })
+    };
+    return this.http.get<Poem[]>('https://kikipavlova.000webhostapp.com/poems', httpOptions);
   }
-
+  
 }
