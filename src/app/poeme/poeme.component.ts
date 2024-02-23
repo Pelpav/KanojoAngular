@@ -40,7 +40,7 @@ export class PoemeComponent {
   ngOnInit(): void {
     this.poemService.getAllPoems().subscribe(
       poems => {
-        this.poems = poems;
+        this.poems = poems.sort((a, b) => a.id - b.id); // Ajoutez cette ligne
       },
       error => {
         console.error('Erreur lors de la récupération des poèmes : ', error);
