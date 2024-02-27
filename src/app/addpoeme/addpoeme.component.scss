@@ -59,7 +59,7 @@
   }
   .text-field label {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 0;
     transform: translateY(-50%);
     color: #fff;
@@ -75,11 +75,16 @@
     outline: none;
     font-size: 16px;
     color: #fff;
+    padding-bottom: 100px;
+  }
+
+  .text-field textarea::-webkit-scrollbar {
+    display: none;
   }
 
   .text-field textarea:focus~label,
   .text-field textarea:valid~label {
-    font-size: 0.8rem;
+    font-size: 16px;
     top: 10px;
     transform: translateY(-120%);
   }
