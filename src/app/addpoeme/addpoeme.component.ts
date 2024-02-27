@@ -41,6 +41,15 @@ export class AddpoemeComponent{
             console.log('Poème ajouté avec succès :', response);
             window.alert('Poème ajouté avec succès !');
             this.router.navigate(['/poemes']); // Rediriger
+            // Envoyer une requête POST à l'URL du build hook de Netlify
+    this.http.post("https://api.netlify.com/build_hooks/65ddbeec16ee3db6a4aead8e", {}).subscribe(
+        response => {
+          console.log('Déploiement du serveur déclenché avec succès :', response);
+        },
+        error => {
+          console.error('Erreur lors du déclenchement du déploiement du serveur :', error);
+        }
+      );
           },
           error => {
             console.error('Erreur lors de l\'ajout du poème :', error);
@@ -48,7 +57,10 @@ export class AddpoemeComponent{
           }
         );
     }
-    
+    deploy(){
+        console.log("Déploiement");
+        
+    }
 
     onSubmit() {
         
