@@ -23,6 +23,7 @@
             "polyfills": [
               "zone.js"
             ],
+            "externalDependencies":[""],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -96,7 +97,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["src/assets/js/type.js", "src/assets/js/valentine.js"]
           }
         }
       }
