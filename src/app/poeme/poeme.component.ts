@@ -46,6 +46,8 @@ export class PoemeComponent {
   getPoemById(id: number): Observable<Poem> {
     // Chercher le poème dans le tableau 'poems'
     const poem = this.poems.find((poem) => poem.id === id);
+    console.log(poem);
+    
 
     // Si le poème est trouvé, retourner un Observable du poème
     if (poem) {
@@ -67,8 +69,8 @@ export class PoemeComponent {
     );
   }
   openPoem(id: number) {
-    this.poemService.getPoemById(id, this.poems).subscribe((poem) => {
-      this.selectedPoem = poem;
+    this.getPoemById(id).subscribe((poem) => {
+      this.selectedPoem = poem;      
       this.showPoemList = false; // Ajoutez cette ligne
     });
   }

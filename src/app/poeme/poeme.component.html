@@ -7,7 +7,8 @@
             <a (click)="openPoem(poem.id)" [innerHTML]="getSafeHtml(poem.title)"></a>
         </div>
       </div>
-      <div  *ngIf="selectedPoem" class="modal">
+
+    <div *ngIf="selectedPoem">
       <div class="glass" (scroll)="true">
         <!-- Modal pour afficher le contenu du poème -->
       <div class="padpoem">
