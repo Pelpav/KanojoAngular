@@ -1,69 +1,44 @@
+#imageDisplay {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+#yesButton{
+  background-color: greenyellow;
+  flex-wrap: nowrap; 
+}
+#noButton{
+  background-color: red;
+  flex-wrap: nowrap; 
+}
+.fle1, .fle2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ajoutez cette ligne */
+}
 
-  h1 {
-    color: #dc143c;
-    text-align: center;
-    font-size: 110%;
-    margin-top: 2%;
-  }
-  p {
-    color: #444;
-    font-size: 90%;
-    text-align: center;
-    margin-top: 0;
-  }
-  
-  /* Couleurs */
-  :root {
-    --color-primary: #ff3860; /* Rouge */
-    --color-secondary: #ff007f; /* Rose */
-    --color-tertiary: #ffffff; /* Blanc */
-    --color-quaternary: #f012be; /* Violet */
-    --color-link: #ffffff; /* Blanc */
-  }
-  
-  header h1 {
-    margin-top: 0%;
-  }
-  
-  /* Typographie */
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    font-weight: bold;
-  }
-  
-  h2 {
-    font-size: 100%;
-    margin-bottom: 1%;
-  }
-  
-  p {
-    margin-bottom: 3%;
-    line-height: 1.5;
-  }
-  
-  
-  .gradient-background {
-    background: rgb(255, 208, 229);
-    background: linear-gradient(180deg, rgba(255, 208, 229, 1) 0%, rgba(255, 232, 242, 1) 36%, rgba(255, 255, 255, 1) 100%);
-  }
+.gradient-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .bounce2 {
-    animation: bounce2 2s ease infinite;
-  }
+.bounce2 {
+  animation: bounce2 2s ease infinite;
+}
 
-  @keyframes bounce2 {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-20px);
-    }
-    60% {
-      transform: translateY(-10px);
-    }
+@keyframes bounce2 {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
