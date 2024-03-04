@@ -8,6 +8,7 @@ import { PoemdescComponent } from './poemdesc/poemdesc.component';
 import { ValentineComponent } from './valentine/valentine.component';
 import { SortirComponent } from './sortir/sortir.component';
 import { FleursComponent } from './fleurs/fleurs.component';
+import { CountdownComponent } from './countdown/countdown.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/acceuil', pathMatch: 'full' }, 
@@ -19,5 +20,6 @@ export const routes: Routes = [
   { path: 'valentine', component: ValentineComponent},
   { path: 'sortir', component: SortirComponent},
   { path: 'fleurs', component: FleursComponent},
+  { path: 'countdown', component: CountdownComponent},
   { path: '**', component: Erreur404Component}
 ];
