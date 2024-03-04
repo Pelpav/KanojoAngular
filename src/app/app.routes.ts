@@ -7,6 +7,7 @@ import { Erreur404Component } from './erreur404/erreur404.component';
 import { PoemdescComponent } from './poemdesc/poemdesc.component';
 import { ValentineComponent } from './valentine/valentine.component';
 import { SortirComponent } from './sortir/sortir.component';
+import { FleursComponent } from './fleurs/fleurs.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/acceuil', pathMatch: 'full' }, 
@@ -17,5 +18,6 @@ export const routes: Routes = [
   { path: 'addpoeme', component: AddpoemeComponent},
   { path: 'valentine', component: ValentineComponent},
   { path: 'sortir', component: SortirComponent},
+  { path: 'fleurs', component: FleursComponent},
   { path: '**', component: Erreur404Component}
 ];
