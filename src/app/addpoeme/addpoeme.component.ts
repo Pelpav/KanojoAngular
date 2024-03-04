@@ -42,7 +42,7 @@ export class AddpoemeComponent{
             window.alert('Poème ajouté avec succès !');
             this.router.navigate(['/poemes']); // Rediriger
             // Envoyer une requête POST à l'URL du build hook de Netlify
-    this.http.post("https://api.netlify.com/build_hooks/65ddbeec16ee3db6a4aead8e", {}).subscribe(
+            this.http.post("https://api.netlify.com/build_hooks/65ddbeec16ee3db6a4aead8e", {}).subscribe(
         response => {
           console.log('Déploiement du serveur déclenché avec succès :', response);
         },

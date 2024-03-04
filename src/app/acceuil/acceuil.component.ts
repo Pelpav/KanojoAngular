@@ -11,10 +11,12 @@ import { NavbarComponent } from "../navbar/navbar.component";
 export class AcceuilComponent {
     playVideos() {
         const videoPlayer = document.getElementById('videoPlayer') as HTMLVideoElement;
+        const btnPlayer = document.getElementById('pbutton') as HTMLDivElement;
         const videoSources = ['../../assets/videos/vid1.mp4', '../../assets/videos/vid2.mp4', '../../assets/videos/vid3.mp4']; // Remplace avec tes noms de fichiers vidéo
 
         let currentVideoIndex = 0;
 
+        btnPlayer.style.display = 'none';
         videoPlayer.src = videoSources[currentVideoIndex];
         videoPlayer.style.display = 'block';
 
