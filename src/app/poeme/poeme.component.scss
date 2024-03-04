@@ -18,7 +18,9 @@
 .padpoem{
     padding-left: 50px;
     padding-top: 20px;
-    
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .padpoem::-webkit-scrollbar {
