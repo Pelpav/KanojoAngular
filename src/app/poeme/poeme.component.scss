@@ -21,6 +21,10 @@
     
 }
 
+.padpoem::-webkit-scrollbar {
+    display: none;
+  }
+
 a{
     color: white;
     cursor: pointer;
