@@ -8,6 +8,25 @@ import { NavbarComponent } from "../navbar/navbar.component";
     styleUrl: './acceuil.component.scss',
     imports: [NavbarComponent]
 })
-export class AcceuilComponent {  
-  
+export class AcceuilComponent {
+    playVideos() {
+        const videoPlayer = document.getElementById('videoPlayer') as HTMLVideoElement;
+        const videoSources = ['../../assets/videos/vid1.mp4', '../../assets/videos/vid2.mp4', '../../assets/videos/vid3.mp4']; // Remplace avec tes noms de fichiers vidéo
+
+        let currentVideoIndex = 0;
+
+        videoPlayer.src = videoSources[currentVideoIndex];
+        videoPlayer.style.display = 'block';
+
+        videoPlayer.addEventListener('ended', () => {
+            currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+            videoPlayer.src = videoSources[currentVideoIndex];
+            videoPlayer.load();
+            videoPlayer.play();
+        });
+
+        videoPlayer.load();
+        videoPlayer.play();
+    }
 }
+

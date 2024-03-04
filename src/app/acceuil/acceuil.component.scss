@@ -1,6 +1,35 @@
+#videoPlayer {
+  width: 30%;
+  height: 30%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.video-content {
+  flex: 1;
+}
 
 
-
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width:850px) {
   .main .navbar{
     flex-direction: column;
@@ -28,4 +57,10 @@
   .main .navbar{
     padding: 15px 10px;
 }
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
 }
