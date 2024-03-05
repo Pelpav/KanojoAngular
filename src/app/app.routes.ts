@@ -9,6 +9,7 @@ import { ValentineComponent } from './valentine/valentine.component';
 import { SortirComponent } from './sortir/sortir.component';
 import { FleursComponent } from './fleurs/fleurs.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/acceuil', pathMatch: 'full' }, 
@@ -21,5 +22,6 @@ export const routes: Routes = [
   { path: 'sortir', component: SortirComponent},
   { path: 'fleurs', component: FleursComponent},
   { path: 'countdown', component: CountdownComponent},
+  { path: 'calendar', component: CalendarComponent},
   { path: '**', component: Erreur404Component}
 ];
