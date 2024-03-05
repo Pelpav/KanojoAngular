@@ -51,7 +51,7 @@ a{
 }
 
 @media (min-height:915px) {
-    @media (max-height:931px) {
+    @media (max-height:940px) {
         .glass{
             height: 750px;
         }
@@ -59,14 +59,8 @@ a{
     
 }
 
-@media (min-height:931){
+@media (min-height:940){
     .glass{
         height: 600px;
-    }
-}
-
-@media (max-height:960){
-    .glass{
-        height: 750px;
     }
 }
