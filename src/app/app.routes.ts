@@ -10,7 +10,6 @@ import { SortirComponent } from './sortir/sortir.component';
 import { FleursComponent } from './fleurs/fleurs.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { CalendarComponent } from './calendar/calendar.component';
-
 export const routes: Routes = [
   { path: '', redirectTo: '/acceuil', pathMatch: 'full' }, 
   { path: 'acceuil', component: AcceuilComponent },
