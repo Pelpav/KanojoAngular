@@ -1,0 +1,36 @@
+<div class="main">
+    <app-navbar></app-navbar>
+    <div class="main-min">
+        <div class="container hidden" [class.hidden]="isBirthdayToday()">
+            <div class="title">
+                <h1>En couple pendant </h1>
+            </div>
+
+            <div align="center" id="countdown">
+                <ul>
+                    <li><span class="days">{{ days }}</span>Jours</li>
+                    <li><span class="hours">{{ hours }}</span>Heures</li>
+                    <li><span class="minutes">{{ minutes }}</span>Minutes</li>
+                    <li><span class="seconds">{{ seconds }}</span>Secondes</li>
+                </ul>
+            </div>
+
+            <div align="center">
+                <br>
+                <br>
+                <h2>Ensemble depuis le 30 septembre 2022</h2>
+                <br>
+                <h2>Rupture le 7 septembre 2024 😔🥺</h2>
+                <br>
+                <h2>PS : Le compte à rebourd ne bouge plus</h2>
+            </div>
+        </div>
+
+        <div align="center" id="content" class="emoji hidden" [class.hidden]="!isBirthdayToday()">
+            <h1 align="center">C'est notre anniversaire</h1>
+            <span>🥳</span>
+            <span>🎉</span>
+            <span>🎂</span>
+        </div>
+    </div>
+</div>

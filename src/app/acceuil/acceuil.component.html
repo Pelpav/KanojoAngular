@@ -1,0 +1,28 @@
+
+    <title>KikiPav</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <div class="main">
+      <app-navbar></app-navbar>
+      <div class="content">
+        <div class="text-content">
+          <h2>Kiki ❤ Pav,<br />Site dédié au partage de notre amour fusionnel</h2>
+          <p>
+            Nous sommes un couple amoureux passionné par l'écriture de poèmes.
+            Nous avons créé ce site pour partager notre amour avec le monde.
+          </p>
+        </div>
+        <div class="video-content">
+          <div class="play-button" id="pbutton">
+            <span class="play">Clique sur le bouton play  </span>
+            <i class="fas fa-play" (click)="playVideos()"></i>
+          </div>
+          <div class="video">
+            <video id="videoPlayer" controls autoplay style="display: none; width: 640px; height: 480px;"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+    

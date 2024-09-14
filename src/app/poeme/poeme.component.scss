@@ -1,0 +1,66 @@
+.poems{
+    z-index: 8000;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 3%;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.padpoem{
+    padding-left: 50px;
+    padding-top: 20px;
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.padpoem::-webkit-scrollbar {
+    display: none;
+  }
+
+a{
+    color: white;
+    cursor: pointer;
+}
+
+.fermer{
+    outline: none;
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 6px 15px;
+  border: none;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: linear-gradient( 135deg, #ff9a9e  10%, #F6416C 100%);
+  text-decoration: none;
+}
+
+@media (min-height:915px) {
+    @media (max-height:940px) {
+        .glass{
+            height: 750px;
+        }
+    }
+    
+}
+
+@media (min-height:940){
+    .glass{
+        height: 600px;
+    }
+}

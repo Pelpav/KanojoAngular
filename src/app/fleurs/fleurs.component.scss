@@ -1,0 +1,7 @@
+@import 'global';
+@import 'floyer';
+@import 'long-g';
+@import 'animation';
+.not-loaded * {
+  animation-play-state: paused !important;
+}

@@ -1,0 +1,19 @@
+<div class="main">
+  <app-navbar></app-navbar>
+  <div class="form">
+    <div class="wrapper">
+      <form [formGroup]="poemeForm" (ngSubmit)="onSubmit()">
+        <h2>Ajouter</h2>
+        <div class="input-field">
+          <input formControlName="title" id="title" type="text" required>
+          <label>Titre</label>
+        </div>
+        <div class="text-field">
+          <textarea formControlName="content" id="content" rows="4" required></textarea>
+          <label>Texte</label>
+        </div>
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</div>

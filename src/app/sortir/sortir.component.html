@@ -1,0 +1,26 @@
+<div class="main">
+    <app-navbar></app-navbar>
+        <div class="container">
+            <div *ngIf="!isButtonClicked">
+            <div >
+                <h1 class = "header_text">Kiné, veux-tu sortir avec moi ?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id="yesButton" (click)="onYesClick()">Oui</button>
+                <button class="btn" id="noButton" #noButton (mouseover)="onNoMouseOver()">Non</button>
+                            </div>
+                        </div>
+<div *ngIf="isButtonClicked">
+                <div  >
+                    <h1 class = "header_text">Youpiii !!! </h1>
+                </div>
+                <div class="gif_container">
+                    <img src="assets/images/cute-cat.gif" alt="Cute animated illustration">
+                </div>
+                <p class = "header_text"> A Très vite pour une prochaine surprise !</p>
+        </div>
+  </div>
+</div>

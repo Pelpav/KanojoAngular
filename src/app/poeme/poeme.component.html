@@ -1,0 +1,31 @@
+<div class="main">
+  <app-navbar>
+  </app-navbar>
+  <!-- <div class="padpoem" *ngIf="showPoemList">
+    <h2>Liste des poèmes</h2>
+    <div class="poems" *ngFor="let poem of poems">
+      <a (click)="openPoem(poem.id)" [innerHTML]="getSafeHtml(poem.title)"></a>
+    </div>
+  </div> -->
+
+  <div class="main-min" style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+    <div style="text-align: center;">
+      <h1>Non DISPONIBLE (Toujours stocké)</h1>
+      <br>
+      <br>
+      <h2>Seront de retour si on se remet ensemble 😔</h2>
+    </div>
+  </div>
+
+  <div *ngIf="selectedPoem">
+    <div class="glass" (scroll)="true">
+      <!-- Modal pour afficher le contenu du poème -->
+      <div class="padpoem">
+        <h2>{{ selectedPoem.title }}</h2>
+        <p [innerHTML]="transformContent(selectedPoem.content)"></p>
+        <a class="fermer" (click)="closePoem()">Fermer</a>
+      </div>
+    </div>
+  </div>
+
+</div>
